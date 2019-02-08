@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <head>
+            <title>Razor Fun</title>
+        </head>
+    </head>
+    <body>
+        <h2>Here are some fantasy heroes</h2>
+        @{
+            var StringList = new List<string>{
+                "Elric",
+                "Gandolf",
+                "Conan",
+                "Red Sonya"};
+
+            foreach (var word in StringList)
+            {
+                @if (word.Substring(0,1) == ("C"))
+                {
+                    <p style="color:red;">@word</p>
+                } else {
+                    <p>@word</p>
+                }
+            }
+        }
+    </body>
+</html>
